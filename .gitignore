@@ -1,0 +1,13 @@
+# Outputs not to be shared to github 
+inputs/
+outputs/
+plots/
+traces/
+pcaps/
+
+__pycache__/
+nohup.out
+
+# Theoratical and practical data points
+# theoratical/
+# practical/
