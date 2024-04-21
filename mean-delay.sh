@@ -97,8 +97,6 @@ handle_array() {
   fi
 }
 
-echo -e "okay"
-
 # Step 1: Checking for Execution
 fileName="$1"
 if [ -z "$fileName" ]; then

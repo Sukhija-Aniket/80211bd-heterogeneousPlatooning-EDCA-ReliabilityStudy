@@ -11,3 +11,13 @@ DATA_RATE = 3 * 1000 * 1000 # p
 DATA_RATE = 27 * 1000 * 1000 # bd
 PROPAGATION_DELAY = 2/1000000 # NOTE taken as given in paper
 TRANSMISSION_TIME = PHY_HEADER_SIZE/BASIC_RATE + (MAC_HEADER_SIZE + PACKET_SIZE)/DATA_RATE + PROPAGATION_DELAY
+
+QUEUE_MAP = {
+    'BE': 0,
+    'BK': 1,
+    'VI': 2,
+    'VO': 3
+}
+
+INVERSE_MAP = ['BE', 'BK', 'VI', 'VO']
+FOLDERS = ["variable_nodes", "variable_data_rate", "variable_packet_size", "variable_critical_rate", "variable_general_rate"]
