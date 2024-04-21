@@ -21,7 +21,7 @@ To run this project, follow these steps:
    - Clone this project into the `/scratch` directory of your NS3 installation. This can be done using the following command:
      ```bash
      cd path/to/ns-3.36/scratch
-     git clone 
+     git clone git@github.com:Sukhija-Aniket/80211bd-heterogeneousPlatooning-EDCA-ReliabilityStudy.gi
      ```
 
 3. **Running the Simulation:**
@@ -29,12 +29,30 @@ To run this project, follow these steps:
      ```bash
      cd path/to/ns-3.36
      ```
-   - Run the simulation script from the NS3 root directory:
+   - Run the simulation script located at the root:
      ```bash
-     ./ns3 --run scratch/projectname/simulation-script
+     ./mean-delay.sh FILENAME [OPTIONS] 
      ```
 
-   Replace `simulation-script` with the actual name of your simulation script file.
+   Replace `FILENAME` with the actual name of your simulation script file `test.cc`
+
+## Setting up NS3 for 802.11bd
+In order to use 802.11bd, we need to make certain adjustments to the NS3 source code.
+The following files need to be changed:
+```
+src/wave/helper/wave-helper.cc
+src/wave/model/wave-net-device.cc 
+src/wifi/model/wifi-phy.h
+src/wifi/model/frame-exchange-manager.cc
+src/wifi/model/wifi-phy.cc
+src/wifi/model/wifi-standards.h
+src/wifi/model/wifi-phy-operating-channel.cc
+src/wifi/model/wifi-remote-station-manager.cc
+src/wifi/model/wifi-default-ack-manager.cc 
+```
+
+Refer to `codeChanges.pdf` to make these changes and run the project.
+
 
 ## Contributing
 
@@ -63,11 +81,16 @@ Contributions to this project are welcome. Here's how you can contribute:
 
 ## Support
 
-For support, please open an issue in the GitHub repository, or contact the project maintainers directly.
+For assistance with issues related to this project, you can:
+- Open an issue directly in the GitHub repository for bug reports, feature requests, or other discussions.
+- Contact the project maintainers via email for direct support at b20081@students.iitmandi.ac.in
+
+Please include a detailed description of your issue or inquiry for more efficient support.
+
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
