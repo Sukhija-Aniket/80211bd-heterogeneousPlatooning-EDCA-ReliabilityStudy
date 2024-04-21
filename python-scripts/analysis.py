@@ -90,7 +90,7 @@ def main():
 
     elif position_model.endswith('platoon'):
         for distance in distance_array:
-            platoon_analysis(input_file_template, input_path, data_path, plot_path, json_data, distance)
+            platoon_analysis(context_map, input_file_template, input_path, data_path, plot_path, json_data, distance)
             
       
 if __name__ == "__main__":
